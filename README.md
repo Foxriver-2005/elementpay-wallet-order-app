@@ -115,6 +115,6 @@ This project is deployed on Vercel. You can access the live app here:
 
 Go to:
 
-/ → Wallet Connect
+/  Wallet Connect
 
-/order → Order Form
+/order  Order Form
