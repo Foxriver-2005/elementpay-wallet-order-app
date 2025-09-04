@@ -7,14 +7,12 @@ import {
   WagmiConfig,
   RainbowKitProvider,
   wagmiConfig,
-  chains,
 } from '@/lib/wallet';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useState } from 'react';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // Ensure QueryClient is only created once on the client
   const [queryClient] = useState(() => new QueryClient());
 
   return (
@@ -22,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <QueryClientProvider client={queryClient}>
           <WagmiConfig config={wagmiConfig}>
-            <RainbowKitProvider chains={chains}>
+            <RainbowKitProvider>
               {children}
             </RainbowKitProvider>
           </WagmiConfig>
