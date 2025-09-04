@@ -3,9 +3,9 @@ import { orders } from '../create/route';
 
 export async function GET(
   req: NextRequest,
-  context: { params: { order_id: string } }
+  context: { params: Promise<{ order_id: string }> }
 ) {
-  const { order_id } = context.params;
+  const { order_id } = await context.params;
 
   if (!orders.has(order_id)) {
     return NextResponse.json(
