@@ -13,7 +13,6 @@ const chains = [mainnet, polygon, optimism, arbitrum];
 const { connectors } = getDefaultWallets({
   appName: 'ElementPay',
   projectId: '8adb524ee84c7fd6c303a5d776aa2624',
-  chains,
 });
 
 export const wagmiConfig = createConfig({
