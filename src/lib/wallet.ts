@@ -8,7 +8,7 @@ import {
 } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
 
-const chains = [mainnet, polygon, optimism, arbitrum];
+const chains = [mainnet, polygon, optimism, arbitrum] as const;
 
 const { connectors } = getDefaultWallets({
   appName: 'ElementPay',
@@ -25,7 +25,6 @@ export const wagmiConfig = createConfig({
     [arbitrum.id]: http(),
   },
   ssr: true,
-  autoConnect: true,
 });
 
 export { chains, RainbowKitProvider, WagmiConfig };
