@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { orders } from '../create/route';
 
-export async function GET(req: NextRequest, { params }: { params: { order_id: string } }) {
-  const { order_id } = params;
+export async function GET(
+  req: NextRequest,
+  context: { params: { order_id: string } }
+) {
+  const { order_id } = context.params;
 
   if (!orders.has(order_id)) {
     return NextResponse.json(
