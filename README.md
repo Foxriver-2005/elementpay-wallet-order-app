@@ -43,6 +43,13 @@ npm run dev
 ```
 Open http://localhost:3000 to view in the browser.
 
+# How to Use
+
+1. Connect your wallet on the homepage (`/`).
+
+2. After successful connection, navigate to `/order` to fill out the order form and create a new wallet order.
+
+
 ### Deployment
 This project is deployed on Vercel. You can access the live app here:
 
